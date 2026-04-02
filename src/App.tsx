@@ -12,6 +12,7 @@ const VisionMission = lazy(() => import("./pages/profile/VisionMission"));
 const PrincipalProfile = lazy(() => import("./pages/profile/PrincipalProfile"));
 const OrgStructure = lazy(() => import("./pages/profile/OrgStructure"));
 const News = lazy(() => import("./pages/News"));
+  const NewsDetail = lazy(() => import("./pages/NewsDetail"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const TeachersStaff = lazy(() => import("./pages/TeachersStaff"));
 const Extracurricular = lazy(() => import("./pages/Extracurricular"));
@@ -39,7 +40,8 @@ const AnimatedRoutes = () => {
           <Route path="/profil/visi-misi" element={<VisionMission />} />
           <Route path="/profil/kepala-sekolah" element={<PrincipalProfile />} />
           <Route path="/profil/struktur-organisasi" element={<OrgStructure />} />
-          <Route path="/berita" element={<News />} />
+<Route path="/berita" element={<News />} />
+          <Route path="/berita/:id" element={<NewsDetail />} />
           <Route path="/galeri" element={<Gallery />} />
           <Route path="/guru-staff" element={<TeachersStaff />} />
           <Route path="/ekstrakurikuler" element={<Extracurricular />} />
