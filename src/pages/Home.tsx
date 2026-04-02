@@ -84,8 +84,8 @@ const Home = () => {
           transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
           className="absolute inset-0"
         >
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-cover bg-center blur-sm brightness-75" style={{ backgroundImage: `url(${slide.image})` }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-800/50 to-blue-600/30 backdrop-blur-md" />
         </motion.div>
 
         <div className="relative z-10 container-custom">
@@ -101,21 +101,6 @@ const Home = () => {
             <p className="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed drop-shadow-lg mb-8">
               {slide.description}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/profil/tentang"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-2xl hover:from-amber-400 hover:to-orange-400 hover:shadow-amber-300/50 hover:-translate-y-1 transition-all duration-300 font-bold rounded-xl"
-              >
-                Tentang Kami
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/kontak"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/40 hover:shadow-2xl hover:text-gray-900 hover:-translate-y-1 transition-all duration-300 border-2 border-white/30"
-              >
-                Hubungi Kami
-              </Link>
-            </div>
           </motion.div>
         </div>
 
