@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import MainLayout from "@/layouts/MainLayout";
 import SectionWrapper from "@/components/SectionWrapper";
 import NewsCard from "@/components/cards/NewsCard";
+import TypewriterText from "@/components/TypewriterText";
 import { newsData, facilitiesData, principalProfile } from "@/data/school-data"; 
 import heroImage1 from "@/assets/hero-school.jpg";
 import heroImage2 from "@/assets/hero-slide-2.jpg";
@@ -106,24 +107,41 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 container-custom">
           <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="max-w-2xl"
-            >
-              <p className="text-secondary font-semibold text-sm uppercase tracking-widest mb-4">
-                {slide.subtitle}
-              </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 whitespace-pre-line">
-                {slide.title}
-              </h1>
-              <p className="text-primary-foreground/85 text-lg md:text-xl mb-8 leading-relaxed">
-                {slide.description}
-              </p>
-              <div className="flex flex-wrap gap-4">
+            <div className="max-w-2xl h-[70vh] md:h-[75vh] flex flex-col justify-center relative">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex flex-col justify-center flex-1"
+              >
+              <TypewriterText 
+                texts={heroSlides.map(s => s.subtitle)}
+                className="text-secondary font-semibold text-sm uppercase tracking-widest mb-1 block h-5 flex items-center"
+                typingSpeed={30}
+                deleteSpeed={15}
+                pauseSpeed={600}
+              />
+              <TypewriterText 
+                texts={[
+                  'SMA Negeri 5 Kota Tual',
+                  'Modern & Kondusif',
+                  'Meraih Masa Depan'
+                ]}
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-2 block h-[140px] md:h-[180px] lg:h-[200px] flex items-center"
+                typingSpeed={40}
+                deleteSpeed={30}
+                pauseSpeed={1500}
+              />
+              <TypewriterText 
+                texts={heroSlides.map(s => s.description)}
+                className="text-primary-foreground/85 text-lg md:text-xl mb-4 leading-relaxed block h-[80px] md:h-[100px] flex items-start"
+                typingSpeed={30}
+                deleteSpeed={12}
+                pauseSpeed={1200}
+              />
+              <div className="flex flex-wrap gap-4 pt-4 mt-auto absolute bottom-0 left-0 pb-8">
                 <Link
                   to="/profil/tentang"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold hover:brightness-110 transition-all"
