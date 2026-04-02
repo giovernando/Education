@@ -85,6 +85,72 @@ export const galleryData: GalleryItem[] = [
   { id: "8", title: "Lomba Karya Tulis", image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800", category: "Prestasi", type: "image" },
 ];
 
+export const achievementsData: Achievement[] = [
+  {
+    id: "1",
+    title: "Juara 1 Olimpiade Sains Nasional Tingkat Provinsi",
+    description: "Tim IPA meraih juara 1 OSN tingkat provinsi kategori Fisika.",
+    date: "2026-03-10",
+    category: "Akademik",
+    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b3243?w=800",
+    level: "Provinsi",
+  },
+  {
+    id: "2",
+    title: "Juara 2 Lomba Debat Bahasa Inggris Antar Sekolah",
+    description: "Tim debat bahasa Inggris meraih juara 2 tingkat kota.",
+    date: "2026-02-15",
+    category: "Akademik",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800",
+    level: "Kota",
+  },
+  {
+    id: "3",
+    title: "Juara 1 Futsal U-17 Antar Sekolah",
+    description: "Tim futsal putra meraih juara 1 liga futsal sekolah kota Tual.",
+    date: "2026-01-20",
+    category: "Olahraga",
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800",
+    level: "Kota",
+  },
+  {
+    id: "4",
+    title: "Juara 1 Lomba Tari Tradisional Tingkat Provinsi",
+    description: "Kelompok tari tradisional Maluku meraih juara 1.",
+    date: "2025-12-15",
+    category: "Seni",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800",
+    level: "Provinsi",
+  },
+];
+
+export const studentOrgsData: StudentOrganization[] = [
+  {
+    id: "1",
+    name: "OSIS",
+    description: "Organisasi Siswa Intra Sekolah yang mengkoordinasikan seluruh kegiatan siswa.",
+    president: "Rizky Ahmad",
+    members: 25,
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800",
+  },
+  {
+    id: "2",
+    name: "MPK",
+    description: "Majelis Perwakilan Kelas yang mewakili aspirasi siswa di tingkat sekolah.",
+    president: "Sari Indah",
+    members: 15,
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800",
+  },
+  {
+    id: "3",
+    name: "Dewan Ambud Siswa",
+    description: "Lembaga konsultasi untuk penyelesaian masalah siswa.",
+    president: "Bima Seno",
+    members: 8,
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800",
+  },
+];
+
 export const extracurricularData: Extracurricular[] = [
   { id: "1", name: "Pramuka", description: "Kegiatan kepramukaan untuk membentuk karakter dan kedisiplinan siswa.", image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800", schedule: "Sabtu, 14:00 - 16:00", coach: "Pak Budi Santoso" },
   { id: "2", name: "Basket", description: "Latihan dan kompetisi bola basket untuk pengembangan bakat olahraga siswa.", image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800", schedule: "Selasa & Kamis, 15:00 - 17:00", coach: "Pak Hendra Wijaya" },

@@ -15,7 +15,9 @@ const News = lazy(() => import("./pages/News"));
   const NewsDetail = lazy(() => import("./pages/NewsDetail"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const TeachersStaff = lazy(() => import("./pages/TeachersStaff"));
-const Extracurricular = lazy(() => import("./pages/Extracurricular"));
+const PrestasiSiswa = lazy(() => import("./pages/kesiswaan/PrestasiSiswa"));
+const OrganisasiSiswa = lazy(() => import("./pages/kesiswaan/OrganisasiSiswa"));
+const Ekstrakurikuler = lazy(() => import("./pages/kesiswaan/Ekstrakurikuler")); 
 const Facilities = lazy(() => import("./pages/Facilities"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -43,9 +45,11 @@ const AnimatedRoutes = () => {
 <Route path="/berita" element={<News />} />
           <Route path="/berita/:id" element={<NewsDetail />} />
           <Route path="/galeri" element={<Gallery />} />
-          <Route path="/guru-staff" element={<TeachersStaff />} />
-          <Route path="/ekstrakurikuler" element={<Extracurricular />} />
-          <Route path="/fasilitas" element={<Facilities />} />
+  <Route path="/guru-staff" element={<TeachersStaff />} />
+  <Route path="/kesiswaan/prestasi" element={<PrestasiSiswa />} />
+  <Route path="/kesiswaan/organisasi" element={<OrganisasiSiswa />} />
+  <Route path="/kesiswaan/ekstrakurikuler" element={<Ekstrakurikuler />} />
+  <Route path="/fasilitas" element={<Facilities />} /> 
           <Route path="/kontak" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -56,3 +56,23 @@ export interface NavItem {
   path: string;
   children?: NavItem[];
 }
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  category: "Akademik" | "Non-Akademik" | "Olahraga" | "Seni";
+  image: string;
+  level: "Kota" | "Provinsi" | "Nasional" | "Internasional";
+}
+
+export interface StudentOrganization {
+  id: string;
+  name: string;
+  description: string;
+  president: string;
+  members: number;
+  image: string;
+}
+

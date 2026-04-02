@@ -15,7 +15,15 @@ export const navigationItems: NavItem[] = [
   { label: "Berita", path: "/berita" },
   { label: "Galeri", path: "/galeri" },
   { label: "Guru & Staff", path: "/guru-staff" },
-  { label: "Ekstrakurikuler", path: "/ekstrakurikuler" },
+  {
+    label: "Kesiswaan", 
+    path: "/kesiswaan",
+    children: [
+      { label: "Prestasi Siswa", path: "/kesiswaan/prestasi" },
+      { label: "Organisasi Siswa", path: "/kesiswaan/organisasi" },
+      { label: "Ekstrakurikuler", path: "/kesiswaan/ekstrakurikuler" },
+    ],
+  },
   { label: "Fasilitas", path: "/fasilitas" },
   { label: "Kontak", path: "/kontak" },
 ];
