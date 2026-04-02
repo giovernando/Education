@@ -1,9 +1,14 @@
-# Hero Typewriter Effect
+# Data Sekolah Section ✅ COMPLETED
 
-## Steps:
-- [x] 1. Create useTypewriter hook (custom lightweight typing loop)
-- [x] 2. Create TypewriterText reusable component with blinking cursor
-- [x] 3. Update Home.tsx: Import + replace hero h1 with TypewriterText (loop 3 titles, 60ms type/30ms delete/1.5s pause, fixed height for layout)
-- [x] 4. Test: Smooth typing on hero heading, cursor blink, responsive
+**Changes:**
+- Added SchoolStat type & schoolStats data (85 Guru, 20 TU, 1200 Siswa, 30 Ekskul)
+- Inserted parallax section after Berita Terbaru:
+  - Full width py-32, bg-fixed heroImage1 + dark overlay
+  - Left: "Data Sekolah" gradient title + desc
+  - Right: 2x2 yellow glassmorphism cards with icons, hover effects
+  - Parallax via useParallax(0.5), motion fade/slide anims
+  - Responsive grid
 
-Complete: Typing animation added to hero titles, looping ['SMA Negeri 5 Kota Tual', 'Modern & Kondusif', 'Meraih Masa Depan']. No deps, performant. Layout preserved (fixed h for multi-line).
+**Tested live @ localhost:8080** - smooth parallax (desktop), fixed bg mobile, kontras teks perfect.
+
+No errors. Ready!

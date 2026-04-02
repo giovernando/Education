@@ -1,4 +1,4 @@
-import { NewsItem, Teacher, GalleryItem, Extracurricular, Facility, OrgMember } from "@/types";
+import { NewsItem, Teacher, GalleryItem, Extracurricular, Facility, OrgMember, Achievement, StudentOrganization } from "@/types";
 
 export const newsData: NewsItem[] = [
   {
@@ -184,3 +184,5 @@ export const principalProfile = {
   motto: "Pendidikan adalah kunci untuk membuka pintu masa depan yang lebih baik.",
   bio: "Dr. H. Ahmad Fauzi, M.Pd. telah mengabdikan dirinya di dunia pendidikan selama lebih dari 25 tahun. Beliau memiliki visi untuk menjadikan sekolah ini sebagai lembaga pendidikan unggulan yang menghasilkan lulusan berkarakter, berprestasi, dan siap menghadapi tantangan global. Di bawah kepemimpinannya, sekolah telah meraih berbagai prestasi di tingkat nasional dan internasional.",
 };
+
+
