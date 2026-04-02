@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import MainLayout from "@/layouts/MainLayout";
 import SectionWrapper from "@/components/SectionWrapper";
 import NewsCard from "@/components/cards/NewsCard";
-import { newsData, facilitiesData } from "@/data/school-data";
+import { newsData, facilitiesData, principalProfile } from "@/data/school-data"; 
 import heroImage1 from "@/assets/hero-school.jpg";
 import heroImage2 from "@/assets/hero-slide-2.jpg";
 import heroImage3 from "@/assets/hero-slide-3.jpg";
@@ -185,30 +185,56 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Stats */}
-      <section className="relative -mt-0 z-20 pt-10">
+      {/* Principal Profile */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {stats.map((stat, i) => (
+          <SectionWrapper title="Profil Kepala Sekolah" subtitle="Pemimpin visioner yang menginspirasi masa depan pendidikan">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                className="relative mx-auto md:mx-0"
+                initial={{ opacity: 0, scale: 0.8, rotateY: 10 }}
+                whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                whileHover={{ scale: 1.05, rotateY: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="card-elevated p-6 text-center"
               >
-                <stat.icon className="w-8 h-8 mx-auto mb-2 text-primary" />
-                <p className="font-display text-2xl md:text-3xl font-bold text-foreground">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-xl -z-10" />
+                <img 
+                  src={principalProfile.image} 
+                  alt={principalProfile.name}
+                  className="w-full max-w-md h-96 object-cover rounded-3xl shadow-2xl border-4 border-background hover:shadow-primary/25 transition-shadow duration-500 relative z-10" 
+                />
               </motion.div>
-            ))}
-          </div>
+              <div className="space-y-6 md:pl-8">
+                <div>
+                  <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent leading-tight mb-4">
+                    {principalProfile.name}
+                  </h2>
+                  <p className="text-xl text-muted-foreground font-semibold tracking-wide uppercase border-l-4 border-primary pl-4">
+                    {principalProfile.education}
+                  </p>
+                </div>
+                <blockquote className="text-2xl md:text-3xl lg:text-4xl font-display italic font-light text-foreground/80 leading-relaxed border-l-4 border-primary pl-6 py-4 bg-muted/50 rounded-2xl">
+                  "{principalProfile.motto}"
+                </blockquote>
+                <p className="text-lg leading-relaxed text-muted-foreground">
+                  {principalProfile.bio}
+                </p>
+                <Link
+                  to="/profil/kepala-sekolah"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold rounded-2xl hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-primary/25 hover:-translate-y-1 group"
+                >
+                  Baca Profil Lengkap
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </SectionWrapper>
         </div>
       </section>
 
       {/* Latest News */}
-      <SectionWrapper
+      <SectionWrapper 
         title="Berita Terbaru"
         subtitle="Informasi dan kegiatan terkini dari SMA Negeri 5 Kota Tual"
       >
